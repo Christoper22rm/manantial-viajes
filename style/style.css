@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+nav {
+    background-color: #003366;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+nav .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .info-btn,
+nav .login-btn {
+    background-color: #00509e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav .info-btn:hover,
+nav .login-btn:hover {
+    background-color: #003366;
+}
+
+.banner {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 10px;
+    color: #003366;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.search-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.search-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-btn {
+    background-color: #ffcc00;
+    color: #003366;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.search-btn:hover {
+    background-color: #e6b800;
+}
+
+.stopover-section {
+    background-image: url('background-image.png');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    position: relative;
+    color: white;
+}
+
+.stopover-content {
+    background-color: rgba(0, 38, 112, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stopover-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.stopover-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #ffcc00;
+    color: #002670;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e6b800;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.info-box {
+    text-align: center;
+    width: 30%;
+}
+
+.info-box img {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.info-box h3 {
+    font-size: 1.5em;
+    color: #002670;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Media Queries para hacer el diseño responsive */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav .nav-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stopover-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .stopover-content h1 {
+        font-size: 2em;
+    }
+
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav ul {
+        gap: 15px;
+    }
+
+    .stopover-content {
+        width: 70%;
+        padding: 25px;
+    }
+
+    .info-box {
+        width: 45%;
+    }
+}
