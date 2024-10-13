@@ -46,3 +46,6 @@ async function save_data() {
     console.error("Error al guardar en Firebase: ", error);
   }
 }
+
+// Hacer que la función esté disponible globalmente
+window.save_data = save_data;
