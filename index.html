@@ -1,127 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agencia de Viajes</title>
-    <link rel="stylesheet" href="./style/style.css">
-</head>
-<body>
-   <!-- Navigation -->
-<nav>
-    <div class="logo">
-        <img src="./Img/Logo.png" alt="Logo">
-        <h2 class="titule-nav">Barrio Manantial Airlines</h2>
-    </div>
-    <ul>
-        <li><a href="#">Reservar</a></li>
-        <li><a href="#">Mis Viajes</a></li>
-        <li><a href="#">Check-In</a></li>
-        <li><a href="#">ConnectMiles</a></li>
-    </ul>
-    <div class="nav-right">
-        <button class="info-btn">Información</button>
-        <span>Español</span>
-        <button class="login-btn">Iniciar sesión</button>
-    </div>
-    <!-- Ícono de hamburguesa para pantallas pequeñas -->
-    <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Agencia de Viajes</title>
+        <link rel="stylesheet" href="./style/style.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">
+                <img src="./Img/Logo.png" alt="Logo" />
+                <h2 class="titule-nav">Barrio Manantial Airlines</h2>
+            </div>
+            <ul>
+                <li><a href="#">Reservar</a></li>
+                <li><a href="#">Mis Viajes</a></li>
+                <li><a href="#">Check-In</a></li>
+                <li><a href="#">ConnectMiles</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="info-btn">Información</button>
+                <span>Español</span>
+                <button class="login-btn">Iniciar sesión</button>
+            </div>
+            <!-- Ícono de hamburguesa para pantallas pequeñas -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
 
-    <!-- Banner -->
-    <div class="banner">
-        <p>Recuerda que esta actividad se llevara acabo el sábado 16 de noviembre desde las 5:00pm</p>
-    </div>
+        <!-- Banner -->
+        <div class="banner">
+            <p>
+                Recuerda que esta actividad se llevara acabo el sábado 16 de
+                noviembre desde las 5:00pm
+            </p>
+        </div>
 
-    <section class="hero-section">
-        <div class="overlay">
-            <h1 class="hero-title">Explora el mundo con Barrio Manantial Airlines</h1>
-            <p class="hero-subtitle">Tu próxima aventura está a un vuelo de distancia</p>
-        </div>
-    </section>
+        <section class="hero-section">
+            <div class="overlay">
+                <h1 class="hero-title">
+                    Explora el mundo con Barrio Manantial Airlines
+                </h1>
+                <p class="hero-subtitle">
+                    Tu próxima aventura está a un vuelo de distancia
+                </p>
+            </div>
+        </section>
 
-     <!-- CREAR CONTADOR DE INSCRITOS -->
-    
+        <!-- CREAR CONTADOR DE INSCRITOS -->
+        <h1>Pasajeros Inscritos: <span id="passenger-count">0</span></h1>
 
-    <!-- Main Content -->
-<section>
-    <h1 class="title-form">Datos del Pasajero</h1>
-    <div class="search-container">
-        <div class="search-box">
-            <label for="first-name">Nombre</label>
-            <input type="text" id="first-name" placeholder="Ingresa tu nombre">
-        </div>
-        <div class="search-box">
-            <label for="last-name">Apellido</label>
-            <input type="text" id="last-name" placeholder="Ingresa tu apellido">
-        </div>
-        <div class="search-box">
-            <label for="flight">Selecciona el vuelo</label>
-            <select id="flight">
-                <option value="quito-guayaquil">Isla San Cristobal Galapagos, Ecuador</option>
-                <!-- Agrega más opciones de vuelo según sea necesario -->
-            </select>
-        </div>
-        <div class="search-box">
-            <label for="flight-date">Selecciona fecha de vuelo</label> <!-- Etiqueta corregida -->
-            <select id="flight-date"> <!-- Cambié el id para que sea único -->
-                <option value="nov-16-2024">16 de noviembre del 2024</option>
-                <!-- Agrega más opciones de fecha según sea necesario -->
-            </select>
-        </div>
-        <div class="search-box">
-            <label for="flight-time">Hora del vuelo</label>
-            <select id="flight-time"> <!-- Cambié el id para que sea único -->
-                <option value="06:00pm">04:00pm</option>
-                <!-- Agrega más opciones de hora según sea necesario -->
-            </select>
-        </div>
-        <div class="search-box">
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" placeholder="Ingresa tu correo electrónico">
-        </div>
-        <button class="search-btn" onclick="save_data()">Comprar vuelo</button>
-    </div>
-</section>
+        <!-- Main Content -->
+        <section>
+            <h1 class="title-form">Datos del Pasajero</h1>
+            <div class="search-container">
+                <div class="search-box">
+                    <label for="first-name">Nombre</label>
+                    <input
+                        type="text"
+                        id="first-name"
+                        placeholder="Ingresa tu nombre"
+                    />
+                </div>
+                <div class="search-box">
+                    <label for="last-name">Apellido</label>
+                    <input
+                        type="text"
+                        id="last-name"
+                        placeholder="Ingresa tu apellido"
+                    />
+                </div>
+                <div class="search-box">
+                    <label for="flight">Selecciona el vuelo</label>
+                    <select id="flight">
+                        <option value="quito-guayaquil">
+                            Isla San Cristobal Galapagos, Ecuador
+                        </option>
+                        <!-- Agrega más opciones de vuelo según sea necesario -->
+                    </select>
+                </div>
+                <div class="search-box">
+                    <label for="flight-date">Selecciona fecha de vuelo</label>
+                    <!-- Etiqueta corregida -->
+                    <select id="flight-date">
+                        <!-- Cambié el id para que sea único -->
+                        <option value="nov-16-2024">
+                            16 de noviembre del 2024
+                        </option>
+                        <!-- Agrega más opciones de fecha según sea necesario -->
+                    </select>
+                </div>
+                <div class="search-box">
+                    <label for="flight-time">Hora del vuelo</label>
+                    <select id="flight-time">
+                        <!-- Cambié el id para que sea único -->
+                        <option value="06:00pm">04:00pm</option>
+                        <!-- Agrega más opciones de hora según sea necesario -->
+                    </select>
+                </div>
+                <div class="search-box">
+                    <label for="email">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Ingresa tu correo electrónico"
+                    />
+                </div>
+                <button class="search-btn" onclick="save_data()">
+                    Comprar vuelo
+                </button>
+            </div>
+        </section>
 
+        <!-- Sección Stopover -->
+        <section class="stopover-section">
+            <div class="stopover-content">
+                <h1>Haz Stopover en Panamá</h1>
+                <p>
+                    Disfruta dos destinos increíbles sin costo adicional en la
+                    tarifa aérea. Deslúmbrate con las maravillas de Panamá.
+                </p>
+                <button class="cta-button">Conoce más</button>
+            </div>
+        </section>
 
-    <!-- Sección Stopover -->
-    <section class="stopover-section">
-        <div class="stopover-content">
-            <h1>Haz Stopover en Panamá</h1>
-            <p>Disfruta dos destinos increíbles sin costo adicional en la tarifa aérea. Deslúmbrate con las maravillas de Panamá.</p>
-            <button class="cta-button">Conoce más</button>
-        </div>
-    </section>
+        <!-- Sección de Información -->
+        <section class="info-section">
+            <div class="info-box">
+                <img src="./Img/whatsapp.png" alt="whatsapp" />
+                <h3>Tienes dificultades de comprar tu vuelo</h3>
+                <p>
+                    Maneras disponibles de contacto para aclarar cualquier duda.
+                    A nuestro WhatsApp.
+                </p>
+                <a href="https://wa.me/qr/2YNIA7YNH765K1" class="info-btn"
+                    >Comunícate con un Asesor</a
+                >
+            </div>
+            <div class="info-box">
+                <img
+                    src="./Img/contenido-interactivo.png"
+                    alt="Icono de Atención al Cliente"
+                />
+                <h3>Únete a nuestro canal de difusión</h3>
+                <p>Maneras disponibles de mantenerte siempre informado.</p>
+                <a
+                    href="https://whatsapp.com/channel/0029VajM9YxFcow5DtfHJ50T"
+                    class="info-btn"
+                    >Suscribirse</a
+                >
+            </div>
+        </section>
 
-    <!-- Sección de Información -->
-    <section class="info-section">
-        <div class="info-box">
-            <img src="./Img/whatsapp.png" alt="whatsapp">
-            <h3>Tienes dificultades de comprar tu vuelo</h3>
-            <p>Maneras disponibles de contacto para aclarar cualquier duda. A nuestro WhatsApp.</p>
-            <a href="https://wa.me/qr/2YNIA7YNH765K1" class="info-btn">Comunícate con un Asesor</a>
-        </div>
-        <div class="info-box">
-            <img src="./Img/contenido-interactivo.png" alt="Icono de Atención al Cliente">
-            <h3>Únete a nuestro canal de difusión</h3>
-            <p>Maneras disponibles de mantenerte siempre informado.</p>
-            <a href="https://whatsapp.com/channel/0029VajM9YxFcow5DtfHJ50T" class="info-btn">Suscribirse</a>
-        </div>
-    </section>
-
-    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js"></script>
-    <script type="module" src="./functions/firebase_functions.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        function toggleMenu() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('active');
-        }
-    </script>
-</body>
+        <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js"></script>
+        <script type="module" src="./functions/firebase_functions.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            function toggleMenu() {
+                const nav = document.querySelector("nav");
+                nav.classList.toggle("active");
+            }
+        </script>
+    </body>
 </html>
