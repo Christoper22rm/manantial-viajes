@@ -29,8 +29,9 @@ async function save_data() {
   let last_name = document.getElementById("last-name").value;
   let flight = document.getElementById("flight").value;
   let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
 
-  if (!first_name || !last_name || !flight || !email) {
+  if (!first_name || !last_name || !flight || !email || !phone) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
@@ -46,6 +47,7 @@ async function save_data() {
       last_name: last_name,
       flight: flight,
       email: email,
+      phone: phone,
       timestamp: new Date(),
     });
 
