@@ -1,269 +1,389 @@
-/* Reset de estilos */
-* {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Fondo claro */
+    color: #333; /* Texto oscuro */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Estilos generales para el nav */
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    background-color: #0033a0; /* Color de fondo similar */
+    padding: 15px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el logo y el título */
+    padding: 10px;
+}
+
+.logo img {
+    width: 50px; /* Ajusta el tamaño del logo, puedes cambiar el valor */
+    height: auto;
+    margin-right: 15px; /* Espacio entre el logo y el texto */
+}
+
+.logo .titule-nav {
+    font-size: 24px; /* Tamaño del título */
+    color: white; /* Puedes ajustar el color según tu diseño */
+    font-weight: bold;
+}
+
+/* Estilos para los elementos del menú */
+nav ul {
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-/* Estilos de navegación */
-nav {
-    background-color: #003366;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-}
-
-nav .logo img {
-    height: 50px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+nav ul li {
+    margin-left: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-weight: bold;
 }
 
-nav .nav-right {
+.nav-right {
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
-nav .info-btn,
-nav .login-btn {
-    background-color: #00509e;
+.nav-right button, .nav-right span {
     color: white;
+    background-color: transparent;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-nav .info-btn:hover,
-nav .login-btn:hover {
-    background-color: #003366;
+.info-btn, .login-btn {
+    padding: 8px 16px;
+    background-color: #0033a0; /* Mismo color de fondo */
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
 }
 
-/* Banner superior */
+.info-btn:hover, .login-btn:hover {
+    background-color: white;
+    color: #0033a0;
+}
+
+/* Ocultar el menú hamburguesa inicialmente */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+}
+
+/* Estilo del banner */
 .banner {
-    background-color: #ffcc00;
+    background-color: #ffcc00; /* Color de fondo llamativo */
+    color: #000; /* Texto en negro para contraste */
+    padding: 10px 20px;
     text-align: center;
-    padding: 10px;
-    color: #003366;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 2px -2px gray; /* Sombra sutil */
 }
 
-/* Estilos del formulario principal */
-header {
-    background-color: #ffffff;
+.banner p {
+    margin: 0;
+}
+
+/* Estilos para la sección */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 80vh; /* Se ajusta mejor a diferentes resoluciones */
+    background-image: url('https://img.freepik.com/foto-gratis/primer-plano-tortuga-verde-nadando-agua-luces_181624-25236.jpg?t=st=1728868839~exp=1728872439~hmac=70462d199ec35632737b0c504ea42c81f3696cab45ce8dc4268d1c3b2aba54cd&w=1060');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para el texto */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    max-width: 90%; /* Limita el ancho en pantallas pequeñas */
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Header y título */
+header {
     text-align: center;
+    margin: 20px 0;
 }
 
 header h1 {
     font-size: 24px;
+    color: #004080;
     margin-bottom: 20px;
-    color: #333;
 }
 
+/* Contenedor del formulario */
+.title-form {
+    text-align: center;
+    color: #003060;
+}
 .search-container {
+    max-width: 700px; /* Ancho máximo ajustado */
+    margin: 0 auto;
+    padding: 80px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+/* Estilos para cada caja de búsqueda */
 .search-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-basis: 48%;
+    margin-bottom: 20px;
 }
 
 .search-box label {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
 }
 
 .search-box input,
 .search-box select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
     border-radius: 5px;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.3s ease;
+    font-size: 16px;
+    color: #555;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s ease-in-out;
 }
 
 .search-box input:focus,
 .search-box select:focus {
-    border-color: #007bff;
+    border-color: #004080;
+    outline: none;
 }
 
-/* Botón de acción */
+/* Botón del formulario */
 .search-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 12px;
+    background-color: #004080;
+    color: #fff;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .search-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Sección de escala */
-.stopover-section {
-    background-image: url('background-image.png');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    position: relative;
-    color: white;
-}
-
-.stopover-content {
-    background-color: rgba(0, 38, 112, 0.9);
-    padding: 30px;
-    border-radius: 10px;
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.stopover-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.stopover-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: #ffcc00;
-    color: #002670;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #e6b800;
+    background-color: #003060;
 }
 
 /* Sección de información */
 .info-section {
     display: flex;
-    justify-content: space-around;
-    padding: 50px 0;
-    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espacio entre los cuadros de información */
+    padding: 50px 20px;
+    background-color: #f5f5f5;
 }
 
+/* Sección de información */
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espacio entre los cuadros de información */
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+/* Estilos de las cajas de información */
 .info-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     text-align: center;
-    width: 30%;
+    width: 300px; /* Ancho fijo para cada caja */
+    transition: transform 0.3s ease;
 }
 
 .info-box img {
+    width: 50px;
     height: 50px;
     margin-bottom: 15px;
 }
 
 .info-box h3 {
-    font-size: 1.5em;
-    color: #002670;
+    font-size: 1.5rem;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .info-box p {
-    font-size: 1em;
+    font-size: 1rem;
     color: #666;
+    line-height: 1.5;
 }
 
-/* Media Queries */
+/* Estilo de los botones */
+.info-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
 
-/* Para móviles */
+.info-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Efecto hover */
+.info-box:hover {
+    transform: translateY(-10px); /* Animación al pasar el cursor */
+}
+
+
+/* Responsive */
 @media (max-width: 768px) {
     nav ul {
+        display: none; /* Ocultar el menú en pantallas pequeñas */
         flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #0033a0;
     }
 
-    nav .nav-right {
-        flex-direction: column;
-        gap: 10px;
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
     }
 
-    .stopover-content {
-        width: 90%;
-        padding: 20px;
+    nav.active ul {
+        display: flex; /* Mostrar el menú al hacer clic en el ícono de hamburguesa */
     }
 
-    .stopover-content h1 {
-        font-size: 2em;
+    .nav-right {
+        display: none; /* Ocultar la parte derecha en pantallas pequeñas */
     }
 
+    /* Mostrar el menú hamburguesa */
+    .hamburger {
+        display: flex;
+    }
+
+    .banner {
+        font-size: 14px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+        padding: 8px 15px;
+    }
+
+    .hero-section {
+        min-height: 60vh; /* Menor altura en pantallas pequeñas */
+        padding: 0 0px; /* Ajusta el padding para mejorar el centrado */
+    }
+
+    .overlay {
+        max-width: 100%; /* Asegura que el contenedor no se desborde */
+        padding: 15px; /* Reducir padding en pantallas pequeñas */
+    }
+
+    .hero-title {
+        font-size: 2rem; /* Reducir tamaño del título en pantallas pequeñas */
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem; /* Ajustar subtítulo */
+    }
+
+    .search-box {
+        flex-basis: 100%; /* Una columna para pantallas más pequeñas */
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+    
     .info-section {
         flex-direction: column;
-        align-items: center;
+        gap: 20px; /* Menor espacio entre cajas en pantallas pequeñas */
     }
 
     .info-box {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .search-container {
-        flex-direction: column;
-        gap: 15px;
+        width: 100%; /* La caja ocupará todo el ancho disponible en pantallas pequeñas */
+        max-width: 500px; /* Limitar el ancho máximo */
     }
 }
 
-/* Para tabletas */
-@media (min-width: 769px) and (max-width: 1024px) {
-    nav ul {
-        gap: 15px;
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem; /* Tamaño aún más pequeño para móviles */
     }
 
-    .stopover-content {
-        width: 70%;
-        padding: 25px;
+    .hero-subtitle {
+        font-size: 1rem; /* Ajuste adicional del subtítulo */
     }
 
-    .info-box {
-        width: 45%;
+    .overlay {
+        padding: 10px; /* Reducir padding en pantallas muy pequeñas */
     }
 }
+
 
