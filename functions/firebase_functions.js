@@ -1,10 +1,27 @@
-// firebase_functions.js
 import { db } from "../firebase.js";
 import {
   collection,
   addDoc,
+  getDocs,
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
+// Función para contar los pasajeros inscritos
+async function updatePassengerCount() {
+  try {
+    const querySnapshot = await getDocs(collection(db, "passengers"));
+    const passengerCount = querySnapshot.size; // El tamaño del snapshot es el número de documentos
+    document.getElementById("passenger-count").innerText = passengerCount;
+  } catch (error) {
+    console.error("Error al obtener el número de pasajeros: ", error);
+  }
+}
+
+// Llamar a la función para actualizar el contador al cargar la página
+window.onload = () => {
+  updatePassengerCount();
+};
+
+// La función save_data que ya tienes
 async function save_data() {
   console.log("Ejecutando función");
 
@@ -37,6 +54,9 @@ async function save_data() {
       text: `El vuelo ha sido reservado. ID de reserva: ${docRef.id}`,
       icon: "success",
     });
+
+    // Actualizar el contador de pasajeros después de guardar los datos
+    updatePassengerCount();
   } catch (error) {
     Swal.fire({
       icon: "error",
@@ -47,5 +67,4 @@ async function save_data() {
   }
 }
 
-// Hacer que la función esté disponible globalmente
 window.save_data = save_data;
